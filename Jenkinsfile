@@ -16,7 +16,7 @@
 
 pipeline {
   environment {
-    registry = "gustavoapolinario/docker-test"
+    registry = "localhost:5000"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -24,7 +24,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/gustavoapolinario/microservices-node-example-todo-frontend.git'
+        git 'https://github.com/irla2/test.git'
       }
     }
     stage('Building image') {
